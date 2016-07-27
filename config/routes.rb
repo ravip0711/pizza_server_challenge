@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   
   root 'pizzas#index'
 
-  resources :toppings
 
   resources :pizzas do
     resources :toppings, controller: :pizza_toppings
   end
+
+  resources :toppings
 
   # get 'toppings/index'
   # get 'toppings/create'

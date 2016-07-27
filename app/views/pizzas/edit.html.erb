@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Edit Pizza</h1>
+
+  <%= render "form" %>
+
+  <%= link_to 'Delete', pizza_path(@pizza), method: "delete", data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Back', root_path %>
+
+</div>
