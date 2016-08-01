@@ -1,13 +1,9 @@
 <div class="form-horizontal">
-  <%= form_for(@pizza) do |f| %>
+  <%= form_for(@topping) do |f| %>
   
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
-
-  <div class="form-group">
-    <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, include_hidden: false) %>
   </div>
   
     <%= f.submit %>

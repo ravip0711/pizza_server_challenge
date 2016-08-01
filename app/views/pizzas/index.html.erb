@@ -10,7 +10,7 @@
           <h4><%= pizza.name %></h4>
           <h5>Description: <%= pizza.description %></h5>
           <%= link_to "Edit", edit_pizza_path(pizza) %>
-          <%= link_to 'Destroy', pizza, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete', pizza, method: :delete, data: { confirm: 'Are you sure?' } %>
         </li>
       <% end %>
       </ul>

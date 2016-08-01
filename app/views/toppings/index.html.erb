@@ -7,8 +7,7 @@
         <% @toppings.each do |topping| %>
           <li>
             <h4><%= topping.name %></h4>
-            <%= link_to "Edit", edit_topping_path(topping) %>
-            <%= link_to 'Destroy', topping, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Delete', topping, method: :delete, data: { confirm: 'Are you sure?' } %>
           </li>
         <% end %>
         </ul>
