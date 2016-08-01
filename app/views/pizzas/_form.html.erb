@@ -9,8 +9,10 @@
   <div class="form-group">
     <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, include_hidden: false) %>
   </div>
+
+  <p>Don't see your toppings? Add them <a href="<%= new_topping_path %>">here</a> first.</p>
   
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
 
   <% end %>  
 </div>
