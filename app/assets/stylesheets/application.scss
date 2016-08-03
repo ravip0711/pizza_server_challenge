@@ -13,3 +13,48 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-image: url('pizza.gif');
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// Creating content box with white transparent background
+#content {
+  background-color: white;
+  opacity: .90;
+  padding: 20px;
+}
+
+// Centering content
+.col-centered {
+  float: none;
+  margin: 20px auto;
+}
+
+
+.title {
+  padding: 0 0 20px 20px ;
+}
+
+// Removed default unordered list bullet points
+li {
+  list-style-type: none;
+}
+
+// Removed default padding
+ul {
+  padding-left: 0;
+}
+
+// Footer nav button padding
+.nav-buttons {
+  padding: 20px;
+}

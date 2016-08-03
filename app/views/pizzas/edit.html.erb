@@ -1,9 +1,11 @@
-<div class="container">
-  <h1>Edit Pizza</h1>
+<h1>Edit Pizza</h1>
 
-  <%= render "form" %>
+<%= render "form" %>
 
-  <%= link_to 'Delete', pizza_path(@pizza), method: "delete", data: { confirm: 'Are you sure?' } %> |
-  <%= link_to 'Back', root_path %>
+<div class="nav-buttons">
+<%= link_to 'Delete Pizza', pizza_path(@pizza), method: "delete", class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+</div>
 
+<div class="nav-buttons">
+  <%= link_to 'Back', root_path, class: "btn btn-info" %>
 </div>

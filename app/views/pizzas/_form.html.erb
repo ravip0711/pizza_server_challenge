@@ -7,12 +7,16 @@
   </div>
 
   <div class="form-group">
-    <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, include_hidden: false) %>
+    <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, include_hidden: false) do |b| %>
+    <ul>
+      <li><%= b.check_box %> - <%= b.label %></li>
+    </ul>
+    <% end %>
   </div>
 
   <p>Don't see your toppings? Add them <a href="<%= new_topping_path %>">here</a> first.</p>
   
-    <%= f.submit class: "btn btn-primary" %>
+    <%= f.submit class: "btn btn-success" %>
 
   <% end %>  
 </div>

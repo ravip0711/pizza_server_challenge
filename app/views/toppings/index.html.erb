@@ -1,16 +1,18 @@
-<div class="container">
+<div class="text-left title">
   <h1>Toppings List</h1>
-  <%= link_to "Create Topping", new_topping_path, class: "btn btn-default" %>
-  <div>
-      <h2>Current Toppings:</h2>
-        <ul>
-        <% @toppings.each do |topping| %>
-          <li>
-            <h4><%= topping.name %></h4>
-            <%= link_to 'Delete', topping, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </li>
-        <% end %>
-        </ul>
-    </div>
-    <%= link_to "Back", root_path %>
+  <%= link_to "Add Topping", new_topping_path, class: "btn btn-danger" %>
 </div>
+<div>
+  <h2>Current Toppings:</h2>
+    <ul>
+    <% @toppings.each do |topping| %>
+      <li>
+        <h3><%= topping.name %></h3>
+        <%= link_to 'Delete', topping, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+      <hr>
+    <% end %>
+    </ul>
+</div>
+
+<%= link_to "Home", root_path, class: "btn btn-info" %>
