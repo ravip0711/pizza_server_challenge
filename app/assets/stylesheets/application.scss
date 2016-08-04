@@ -29,8 +29,9 @@ body {
 // Creating content box with white transparent background
 #content {
   background-color: white;
-  opacity: .90;
+  opacity: .93;
   padding: 20px;
+  border-radius: 10px;
 }
 
 // Centering content
@@ -57,4 +58,10 @@ ul {
 // Footer nav button padding
 .nav-buttons {
   padding: 20px;
+}
+
+.error-styling {
+  background-color: #d9534f;
+  color: white;
+  border-radius: 10px;
 }

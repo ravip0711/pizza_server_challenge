@@ -1,5 +1,5 @@
 class Topping < ApplicationRecord
-  before_save { self.name = name.capitalize }
+  before_save { self.name = name.split.map(&:capitalize).join(' ') }
 
   has_many :pizza_toppings, dependent: :destroy
   has_many :pizzas, through: :pizza_toppings
