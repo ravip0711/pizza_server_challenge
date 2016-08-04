@@ -1,4 +1,4 @@
-class ToppingsController < ApplicationController
+class ToppingsController < ApplicationController  
   def index
     @toppings = Topping.all
   end
@@ -12,7 +12,7 @@ class ToppingsController < ApplicationController
     if @topping.save
       redirect_to toppings_path
     else
-      render :form
+      render :new
     end
   end
 

@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      pizza:
+        topping_ids: ""
+

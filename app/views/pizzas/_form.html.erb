@@ -1,5 +1,6 @@
 <div class="form-horizontal">
   <%= form_for(@pizza) do |f| %>
+    <%= render "layouts/errors", object: f.object %>
   
   <div class="form-group">
     <%= f.label :name %>

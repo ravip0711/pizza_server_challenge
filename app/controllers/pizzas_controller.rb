@@ -10,14 +10,19 @@ class PizzasController < ApplicationController
   def create
     @pizza = Pizza.new(pizza_params)
 
-    str = []
-    pizza_params[:topping_ids].each do |topping_id|
-      str << Topping.find(topping_id).name
+
+    unless pizza_params[:topping_ids].nil?
+      str = []
+      pizza_params[:topping_ids].each do |topping_id|
+        str << Topping.find(topping_id).name
+      end
+      @pizza.description = str.join(", ")
     end
-    @pizza.description = str.join(", ")
 
     if @pizza.save
       redirect_to root_path
+    else
+      render new_pizza_path(@pizza)
     end
   end
 
