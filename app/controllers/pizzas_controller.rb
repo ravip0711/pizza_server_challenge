@@ -12,11 +12,11 @@ class PizzasController < ApplicationController
 
 
     unless pizza_params[:topping_ids].nil?
-      str = []
+      array = []
       pizza_params[:topping_ids].each do |topping_id|
-        str << Topping.find(topping_id).name
+        array << Topping.find(topping_id).name
       end
-      @pizza.description = str.join(", ")
+      @pizza.description = array.join(", ")
     end
 
     if @pizza.save
@@ -36,15 +36,17 @@ class PizzasController < ApplicationController
   def update
     @pizza = Pizza.find(params[:id])
 
-    str = []
-    pizza_params[:topping_ids].each do |topping_id|
-      str << Topping.find(topping_id).name
+    unless pizza_params[:topping_ids].nil?
+      array = []
+      pizza_params[:topping_ids].each do |topping_id|
+        array << Topping.find(topping_id).name
+      end
+      @pizza.description = array.join(", ")
     end
-    @pizza.description = str.join(", ")
-    
+
     if @pizza.update(pizza_params)
       redirect_to root_path
-    else
+    else 
       render :edit
     end
   end
